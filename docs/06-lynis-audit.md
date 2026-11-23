@@ -23,7 +23,7 @@ Don't publish the full report: it can contain hostnames and addresses.
 | After first round of fixes | 78              | 23/11/2026 |
 | After fixes                | TODO            | TODO       |
 
-> **Lynis score (before):** ![16-lynis-before.png](../screenshots/16-lynis-before.png)
+> **Lynis score (before):** ![16-lynis-before.png](../screenshots/16-lynis-before.PNG)
 
 > **Lynis score (after):** ![16b-lynis-after.PNG](../screenshots/16b-lynis-after.PNG)
 
