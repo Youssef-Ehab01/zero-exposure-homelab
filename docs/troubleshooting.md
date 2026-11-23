@@ -1,0 +1,14 @@
+# Troubleshooting
+
+A running list of real problems and how I solved them.
+
+| Symptom                                                                                | Cause                                                                            | Fix                                                                                                                                                                                                                                                                       |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Installer: "No network mirror was selected. Continue without a network mirror?"        | A mirror was skipped; continuing would leave only a minimal base system          | Answer **No**, go back to mirror selection, pick `http`, a nearby country and `deb.debian.org`. Check the Ethernet cable if it still fails                                                                                                                                |
+| Software-selection screen skipped ahead when I pressed Enter on an item                | In this installer, **Space** ticks a box and **Enter** presses Continue          | Untick desktops with Space, tick **SSH server** and **standard system utilities**, then Tab to Continue and press Enter                                                                                                                                                   |
+| `WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!` when connecting after the reinstall | The reinstall created new SSH host keys; my laptop still remembered the old ones | Compare the fingerprint shown in the warning with the one on the server console (`ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub`). If they match, remove the stale entry with `ssh-keygen -R <server-lan-ip>` and reconnect. If they don't match, stop and investigate |
+| TODO                                                                                   | TODO                                                                             | TODO                                                                                                                                                                                                                                                                      |
+
+## Habit
+
+When a warning mentions a possible attack, verify first and then act. The host-key warning is almost always harmless, but checking the fingerprint takes under a minute.

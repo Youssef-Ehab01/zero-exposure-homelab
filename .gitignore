@@ -1,0 +1,11 @@
+# secrets - never commit these
+id_*
+*.pem
+*.key
+.env
+.env*
+authorized_keys
+known_hosts
+# OS junk
+Thumbs.db
+.DS_Store
