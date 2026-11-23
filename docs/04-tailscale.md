@@ -40,7 +40,7 @@ tailscale status
 tailscale ping <server-name>     # "via 192.168.x.x" = direct, "via DERP" = relayed
 ```
 
-![screenshots/11-tailscale-status.png](../screenshots/11-tailscale-status.png)
+![screenshots/11-tailscale-status.png](../screenshots/11-tailscale-status.PNG)
 
 ## Trade-offs
 

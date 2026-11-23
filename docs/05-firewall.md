@@ -29,7 +29,7 @@ sudo ufw status numbered
 sudo ufw delete <rule-number>
 ```
 
-![screenshots/13-ufw-status-verbose.png](../screenshots/13-ufw-status-verbose.png)
+![screenshots/13-ufw-status-verbose.png](../screenshots/13-ufw-status-verbose.PNG)
 ## Verify
 
 On the server:

@@ -18,7 +18,7 @@ type $env:USERPROFILE\.ssh\id_ed25519.pub | ssh <user>@<server-lan-ip> "mkdir -p
 
 Test with a fresh `ssh <user>@<server-lan-ip>`; it should not ask for the account password.
 
-![screenshots/07-ssh-key-login.png](../screenshots/07-ssh-key-login.png)
+![screenshots/07-ssh-key-login.png](../screenshots/07-ssh-key-login.PNG)
 
 ## 3. Disable passwords and root login
 
@@ -46,7 +46,7 @@ ssh -o PreferredAuthentications=password <user>@<server-lan-ip>
 # expect: Permission denied (publickey)
 ```
 
-![screenshots/09-ssh-password-denied.png](../screenshots/09-ssh-password-denied.png)
+![screenshots/09-ssh-password-denied.png](../screenshots/09-ssh-password-denied.PNG)
 ## Host key verification
 
 After reinstalling the OS, SSH warned that the host key had changed. I did not just delete the entry: I compared the fingerprint on the server's own console with the one in the warning, then removed the stale entry. Details in [troubleshooting](troubleshooting.md).

@@ -34,9 +34,9 @@ On the HP, press **Esc** for the startup menu, then **F9** for boot options, and
 | Software selection | Untick all desktops; tick **SSH server** and **standard system utilities** | Minimal attack surface |
 | GRUB boot loader | Internal disk (`/dev/sda`), not the USB stick | The server must boot without the USB |
 
->![04-installer-software-selection.png](../screenshots/04-installer-software-selection.png)
+>![04-installer-software-selection.png](../screenshots/04-installer-software-selection.PNG)
 > 
-> ![05-installer-grub-device.png](../screenshots/05-installer-grub-device.png)
+> ![05-installer-grub-device.png](../screenshots/05-installer-grub-device.PNG)
 ## 4. First boot
 
 ```bash
@@ -57,7 +57,7 @@ free -h
 uptime
 ```
 
->![06-os-release-and-idle2.png](../screenshots/06-os-release-and-idle2.png)
+>![06-os-release-and-idle2.png](../screenshots/06-os-release-and-idle2.PNG)
 
 ## Problems and fixes
 
