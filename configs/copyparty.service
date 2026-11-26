@@ -1,0 +1,27 @@
+[Unit]
+Description=copyparty family file drive
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=copyparty
+Group=copyparty
+ExecStart=/opt/copyparty/bin/python -m copyparty -c /etc/copyparty.conf
+Restart=on-failure
+RestartSec=5
+
+# Hardening: the service can only write to the family folders and its own state dir
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/srv/family /var/lib/copyparty
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+LockPersonality=true
+MemoryMax=768M
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,41 @@
+---
+title: "Family Hub"
+subtitle: "Our home server"
+icon: "fas fa-house"
+header: true
+footer: false
+theme: default
+columns: "3"
+defaults:
+  layout: list
+
+services:
+  - name: "Family"
+    icon: "fas fa-people-roof"
+    items:
+      - name: "Family Files"
+        icon: "fas fa-folder-open"
+        subtitle: "At home (Wi-Fi)"
+        tag: "files"
+        url: "http://<server-lan-ip>:3923"
+      - name: "Family Files (away)"
+        icon: "fas fa-folder-open"
+        subtitle: "Needs the Tailscale app"
+        tag: "files"
+        url: "http://<tailscale-ip>:3923"
+      # Placeholders for services not built yet
+      - name: "Movies & Shows"
+        icon: "fas fa-film"
+        subtitle: "Jellyfin"
+        tag: "watch"
+        url: "#"
+      - name: "Music"
+        icon: "fas fa-music"
+        subtitle: "Navidrome"
+        tag: "listen"
+        url: "#"
+      - name: "Calendar"
+        icon: "fas fa-calendar-days"
+        subtitle: "Shared family calendar"
+        tag: "plan"
+        url: "#"

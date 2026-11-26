@@ -47,6 +47,23 @@ ssh -o PreferredAuthentications=password <user>@<server-lan-ip>
 ```
 
 ![screenshots/09-ssh-password-denied.png](../screenshots/09-ssh-password-denied.PNG)
+## Further hardening after the Lynis audit
+
+The audit (see [doc 06](06-lynis-audit.md)) flagged more SSH settings, which I applied in `sshd_config`:
+
+```
+AllowTcpForwarding no
+AllowAgentForwarding no
+X11Forwarding no
+TCPKeepAlive no
+ClientAliveCountMax 2
+LogLevel VERBOSE
+MaxAuthTries 3
+MaxSessions 2
+```
+
+`fail2ban` is also installed to ban addresses with repeated failed logins. The only SSH suggestion left is changing the port, which I accepted: SSH is reachable only over the VPN, so a different port adds little.
+
 ## Host key verification
 
 After reinstalling the OS, SSH warned that the host key had changed. I did not just delete the entry: I compared the fingerprint on the server's own console with the one in the warning, then removed the stale entry. Details in [troubleshooting](troubleshooting.md).
@@ -58,4 +75,5 @@ After reinstalling the OS, SSH warned that the host key had changed. I did not j
 
 ## What I'd do differently
 
-> **TODO:** one or two lines.
+- Put the whole SSH hardening set in one drop-in file under `/etc/ssh/sshd_config.d/` from the start, so it can be committed to `configs/` and re-applied after a reinstall.
+- Record the host-key fingerprint at install time (see doc 02).

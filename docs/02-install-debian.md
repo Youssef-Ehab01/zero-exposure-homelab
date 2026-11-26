@@ -65,4 +65,5 @@ See [troubleshooting](troubleshooting.md): the mirror screen, the software-selec
 
 ## What I'd do differently
 
-> **TODO:** one or two lines.
+- Verify the ISO checksum before writing the USB, and untick the preselected desktop environment (GNOME was ticked by default) with Space instead of pressing Enter.
+- Write down the server's SSH host-key fingerprint right after the install, so a later "host key changed" warning can be checked against a known value.

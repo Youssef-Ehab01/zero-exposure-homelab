@@ -10,7 +10,7 @@
 | ------- | ---------------------- |
 | Machine | HP Compaq 6720s        |
 | CPU     | Intel Core 2 Duo T7250 |
-| RAM     | ~4 GB                  |
+| RAM | ~4 GB (3.8 GiB usable, after adding a 2 GB stick) |
 | Storage | 2.5" SATA hard drive   |
 | Network | Wired Ethernet         |
 
@@ -62,4 +62,5 @@ cat /etc/os-release   # expect: Debian GNU/Linux 13 (trixie)
 
 ## What I'd do differently
 
-> **TODO:** one or two lines.
+- Skip the Kali experiment on this hardware and go straight to a CLI-only Debian. The desktop and the heavy terminal UI were a big part of the lag, not the hardware itself.
+- Record the hardware state with every measurement. I added a 2 GB RAM stick partway through, so the Kali and Debian RAM numbers come from different configurations.
